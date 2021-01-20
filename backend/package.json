@@ -27,8 +27,8 @@
   "scripts": {
     "build": "tsc && npm run build-dependencies",
     "build-dependencies": "cp package*.json build/ && npm i --only=prod --prefix=build",
-    "dev": "nodemon ./src/devServer.ts",
-    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register './src/__tests__/**/*.ts'"
+    "dev": "nodemon ./dev/devServer.ts",
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register './dev/__tests__/**/*.ts'"
   },
   "author": "",
   "license": "ISC"
