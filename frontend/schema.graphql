@@ -1,0 +1,7 @@
+schema {
+  query: HelloWorld
+}
+
+type HelloWorld {
+  message: String
+}

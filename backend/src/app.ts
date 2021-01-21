@@ -1,7 +1,7 @@
 import * as express from "express";
+import { printSchema } from "graphql";
 import * as multer from "multer";
 import { graphqlHTTP } from "express-graphql";
-
 import schema from "./schema";
 
 const app: express.Application = express();
@@ -22,6 +22,10 @@ app.use(
     storage: multer.memoryStorage(),
   }).any()
 );
+
+app.get("/schema", function(_, res) {
+  res.send(printSchema(schema));
+});
 
 app.use(
   "/graphql",

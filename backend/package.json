@@ -17,6 +17,7 @@
     "@types/graphql-relay": "^0.6.0",
     "@types/mocha": "^8.2.0",
     "@types/multer": "^1.4.5",
+    "@types/node": "^14.14.22",
     "aws-sdk": "^2.829.0",
     "chai": "^4.2.0",
     "graphql-tools": "^7.0.2",
@@ -29,7 +30,8 @@
     "build": "tsc && npm run build-dependencies",
     "build-dependencies": "cp package*.json build/ && npm i --only=prod --prefix=build",
     "dev": "nodemon ./dev/devServer.ts",
-    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register './dev/__tests__/**/*.ts'"
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register './dev/__tests__/**/*.ts'",
+    "print": "ts-node scripts/printSchema"
   },
   "author": "",
   "license": "ISC"
